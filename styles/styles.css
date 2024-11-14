@@ -226,7 +226,7 @@ body {
 }
 
 .notification-label:hover {
-    color: #234d2e; /* Cambia el color cuando pasas el mouse sobre el ícono */
+    color: #ffffff; /* Cambia el color cuando pasas el mouse sobre el ícono */
 }
 
 /* Responsividad */
