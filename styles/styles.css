@@ -148,38 +148,96 @@ body {
     top: 8px;
 }
 
-
-.sub-menu {
-    display: none; 
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
+/* Estilo general de la notificación */
+.notification {
+    position: relative;
+    display: inline-block;
+    padding-left: 200px; /* Este padding se adaptará en pantallas pequeñas */
 }
 
-.submenu-toggle {
-    display: none; 
+.notification-toggle {
+    display: none; /* Ocultamos el checkbox */
 }
 
-.submenu-toggle:checked + .submenu-label + .sub-menu {
-    display: block; 
+.notification-label {
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;  
+    transition: color 0.3s;
+    position: relative;
 }
 
-.sub-menu li {
-    background-color: #234d2e; 
+/* Punto rojo de notificación */
+.notification-label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    
 }
 
-.sub-menu li a {
-    color: white; 
-    padding: 10px;
-    display: block; 
+/* Estilo del cuadro de notificación */
+.notification-content {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #234d2e;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    max-width: 90%; /* Ajusta el ancho en pantallas pequeñas */
+    z-index: 10;
+    text-align: center;
 }
 
-.sub-menu li a:hover {
-    background-color: #4caf4f3f; 
+/* Mostrar la notificación al marcar el checkbox */
+.notification-toggle:checked + .notification-label + .notification-content {
+    display: block;
 }
 
-.submenu-label {
-    cursor: pointer; 
+.notification-toggle:checked + .notification-label::after {
+    display: none; /* Oculta el punto rojo cuando se muestra la notificación */
+}
+
+/* Área de cierre dentro de la notificación */
+.notification-close-area {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.notification-content p {
+    margin: 0;
+}
+
+.notification-label:hover {
+    color: #234d2e; /* Cambia el color cuando pasas el mouse sobre el ícono */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .notification {
+        padding-left: 20px; /* Reduce el padding en pantallas pequeñas */
+    }
+    .notification-content {
+        width: 80%; /* Ajusta el ancho del cuadro de notificación */
+        padding: 15px; /* Reduce el padding */
+    }
 }
 
 
@@ -572,24 +630,25 @@ form button:hover {
 
 .galeria-container {
     display: flex;
-    gap: 20px; 
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias filas */
     width: 90%;
     max-width: 1200px;
-    margin: auto; 
-    padding: 20px; 
+    margin: auto;
+    padding: 20px;
+    justify-content: center; /* Centra los elementos en la pantalla */
 }
+
 .galleria1-section {
     padding: 40px 20px;
-    text-align: center;  
-    
+    text-align: center;
 }
+
 .galleria1-section h2 {
     font-size: 36px;
     margin-bottom: 30px;
     color: #234d2e;
-   
 }
-
 
 .galeria-item {
     background-color: white;
@@ -597,12 +656,14 @@ form button:hover {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.333% - 20px); /* Tres elementos en una fila en pantallas grandes */
+    max-width: calc(33.333% - 20px); /* Limita el ancho de cada elemento */
 }
 
 .galeria-item:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .galeria-item img {
@@ -618,18 +679,18 @@ form button:hover {
 }
 
 
+/* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
+    .galeria-item {
+        flex: 1 1 calc(100% - 20px); /* Un elemento por fila */
+        max-width: calc(100% - 20px);
+    }
     .description {
-        font-size: 0.9rem; 
-        padding: 5px; 
+        font-size: 0.9rem;
+        padding: 5px;
     }
 }
 
-@media (max-width: 768px) {
-    .description {
-        font-size: 0.9rem;
-    }
-}
 
 
 @media (max-width: 768px) {
