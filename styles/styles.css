@@ -543,6 +543,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 20px; /* Para dar espacio entre los elementos */
 }
 
 .mencion {
@@ -553,6 +554,7 @@ h2 {
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box;
 }
 
 .mencion ul {
@@ -577,6 +579,34 @@ h2 {
     max-width: 60%;
     border-radius: 10px;
     margin-top: 10px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .mencion {
+        width: 45%; /* En pantallas más pequeñas, las menciones ocupan el 45% del ancho */
+    }
+}
+
+@media (max-width: 768px) {
+    .mencion {
+        width: 100%; /* En pantallas más pequeñas, las menciones ocupan el 100% del ancho */
+        margin: 10px 0; /* Menos margen entre las menciones */
+    }
+}
+
+@media (max-width: 480px) {
+    .mencion h3 {
+        font-size: 1.5em; /* Ajustar el tamaño de la fuente */
+    }
+
+    .mencion p, .mencion ul li {
+        font-size: 0.9em; /* Ajustar el tamaño del texto */
+    }
+
+    .mencion-image {
+        max-width: 80%; /* La imagen se ajusta un poco más en pantallas muy pequeñas */
+    }
 }
 
 /* ---- Sección Fotos Y Galeria ---- */
