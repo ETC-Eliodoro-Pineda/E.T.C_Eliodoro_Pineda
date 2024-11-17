@@ -335,37 +335,40 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        position: absolute;
+        position: fixed; /* Cambiado a fixed para superponer sobre el contenido */
         top: 80px;
         right: 0;
-        background-color: #234d2ecc ;
+        background-color: #234d2ecc;
         width: 100%;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000; /* Asegura que se superpone sobre otros elementos */
     }
-    .menu-toggle:checked+.hamburger {
+    
+    .menu-toggle:checked + .hamburger {
         background-color: transparent;
     }
-    .menu-:checked+.hamburger::before {
+    
+    .menu-toggle:checked + .hamburger::before {
         transform: rotate(45deg);
         top: 0;
     }
-    .menu-toggle:checked+.hamburger::after {
+    
+    .menu-toggle:checked + .hamburger::after {
         transform: rotate(-45deg);
         top: 0;
     }
-    .menu-toggle:checked~.nav-links {
+    
+    .menu-toggle:checked ~ .nav-links {
         display: flex;
     }
+    
     .hamburger {
         display: block;
+        z-index: 1001; /* Asegura que esté encima del menú desplegable */
     }
-    .services-container,
-    .team-container,
-    .portfolio-container {
-        flex-direction: column;
-        align-items: center;
-    }
+    
+    
     .footer-content {
         flex-direction: row;
         
@@ -886,9 +889,11 @@ main section div {
     display: flex;
     align-items: center;
     padding: 20px;
+    flex-direction: column;
+    background-color: #f0f0f0; /* Fondo para el contenedor de las etiquetas */
+    border-radius: 8px;
 }
 
-/* Estilos específicamente para párrafos dentro de la sección */
 main section div p {
     margin: 10px 0;
     line-height: 1.6;
@@ -896,9 +901,11 @@ main section div p {
 }
 
 main section img {
-    margin-left: 20px;
-    max-width: 100%;
-    height: auto;
+    margin: 10px 0;
+    max-width: 200px; /* Tamaño máximo del ancho */
+    max-height: 200px; /* Tamaño máximo del alto */
+    object-fit: contain; /* Ajustar sin deformar */
+    border-radius: 8px; /* Opcional: bordes redondeados para las imágenes */
 }
 
 main section h2 {
@@ -908,12 +915,7 @@ main section h2 {
     padding-bottom: 10px;
 }
 
-#section6 {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
+
 
 #section6 h2 {
     text-align: center;
@@ -932,9 +934,11 @@ main section h2 {
 }
 
 #section6 div img {
-    margin-left: 20px;
-    max-width: 100%;
-    height: auto;
+    margin: 10px;
+    max-width: 200px; /* Tamaño máximo del ancho */
+    max-height: 200px; /* Tamaño máximo del alto */
+    object-fit: contain; /* Ajustar sin deformar */
+    border-radius: 8px; /* Opcional */
 }
 
 /* Estilos para el aside (barra lateral) */
@@ -988,40 +992,42 @@ aside nav ul li a:hover {
 /* Dispositivos pequeños (pantallas < 768px) */
 @media screen and (max-width: 768px) {
     main {
-        padding-left: 0; /* Eliminar el margen izquierdo en pantallas pequeñas */
+        padding-left: 0;
     }
 
     aside {
-        position: static; /* Cambiar la barra lateral a un flujo normal */
-        width: 100%; /* Hacer el aside ocupar el 100% del ancho */
-        height: auto; /* Dejar que el aside se ajuste al contenido */
-        box-shadow: none; /* Eliminar sombra */
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
     }
 
-    #section6 div {
-        flex-direction: column; /* Apilar los elementos en columnas en pantallas pequeñas */
-        align-items: center; /* Centrar los elementos */
+    aside nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    aside nav ul li {
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    aside nav ul li a {
+        font-size: 14px;
     }
 
     main section div {
-        flex-direction: column; /* Apilar los elementos verticalmente */
+        flex-direction: column;
+        text-align: center;
+        background-color: #f7f7f7; /* Fondo también para pantallas pequeñas */
     }
 
-    /* Ajustar imágenes dentro de las secciones */
     main section img {
-        margin-left: 0; /* Eliminar margen izquierdo */
-        max-width: 100%; /* Asegurar que la imagen se ajuste al ancho del contenedor */
-    }
-    
-    /* Ajustar la visualización de los párrafos */
-    main section div p {
-        margin-left: 0; /* Eliminar margen izquierdo */
-        margin-right: 0; /* Eliminar margen derecho */
-    }
-
-    #section6 div img {
-        margin-left: 0; /* Eliminar margen izquierdo */
-        max-width: 100%; /* Asegurar que la imagen se ajuste al ancho del contenedor */
+        margin: 10px;
+        max-width: 200px;
+        max-height: 200px;
     }
 }
+
 
