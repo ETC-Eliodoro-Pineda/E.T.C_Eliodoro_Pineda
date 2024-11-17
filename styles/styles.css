@@ -872,154 +872,156 @@ form button:hover {
     background-color: #0056b3; 
 }
 
-
+/* Estilos generales */
 main {
-    position: relative; 
-    padding-left: 250px; 
+    position: relative;
+    padding-left: 250px;
 }
+
 main section {
     padding: 20px;
-   
 }
 
 main section div {
-    display: flex;    
+    display: flex;
     align-items: center;
-    padding: 20px; 
-     
+    padding: 20px;
 }
 
+/* Estilos específicamente para párrafos dentro de la sección */
+main section div p {
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: justify;
+}
 
 main section img {
-    margin-left: 20px; 
+    margin-left: 20px;
     max-width: 100%;
-    height: auto; 
+    height: auto;
 }
+
 main section h2 {
     text-align: center;
-    width: 100%; 
-    margin: 0; 
-    padding-bottom: 10px; 
+    width: 100%;
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 #section6 {
-    padding: 20px; 
-    background-color: #f9f9f9; 
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
 #section6 h2 {
-    text-align: center; 
-    margin-bottom: 20px; 
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 #section6 div {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #section6 div p {
-    flex-basis: 100%; 
-    margin-bottom: 10px; 
+    flex-basis: 100%;
+    margin-bottom: 10px;
 }
 
 #section6 div img {
-    margin-left: 20px; 
-    max-width: 100%; 
-    height: auto; 
+    margin-left: 20px;
+    max-width: 100%;
+    height: auto;
 }
 
+/* Estilos para el aside (barra lateral) */
 aside {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    
-    width: 250px; 
-    height: 100%; 
-    background-color: #ffffff; 
-    padding: 20px; 
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 aside nav ul {
-    padding-left: 0; 
+    padding-left: 0;
 }
 
 aside nav ul li {
-    list-style-type: none; 
-    margin-bottom: 10px; 
+    list-style-type: none;
+    margin-bottom: 10px;
 }
 
 aside nav ul li a {
-    color: #234d2e; 
-    text-decoration: none; 
+    color: #234d2e;
+    text-decoration: none;
 }
-
 
 aside nav ul li a:hover {
-    color: #4CAF50; 
-    text-decoration: underline; 
+    color: #4CAF50;
+    text-decoration: underline;
 }
 
-
-
+/* Estilos para el enlace de descarga */
 .download6-link {
-    display: inline-block; 
-    padding: 10px 15px; 
-    margin-top: 10px; 
-    background-color: #4CAF50; 
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #4CAF50;
     color: white;
-    text-decoration: none; 
-    border-radius: 5px; 
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .download6-link:hover {
-    background-color: #45a049; 
+    background-color: #45a049;
 }
 
-@media (max-width: 768px) {
+/* Media Queries para hacerlo responsivo */
+
+/* Dispositivos pequeños (pantallas < 768px) */
+@media screen and (max-width: 768px) {
     main {
-        padding-left: 0; 
+        padding-left: 0; /* Eliminar el margen izquierdo en pantallas pequeñas */
     }
 
     aside {
-        position: relative; 
-        width: 100%; 
-        height: auto; 
-        border-right: none; 
-        
+        position: static; /* Cambiar la barra lateral a un flujo normal */
+        width: 100%; /* Hacer el aside ocupar el 100% del ancho */
+        height: auto; /* Dejar que el aside se ajuste al contenido */
+        box-shadow: none; /* Eliminar sombra */
     }
 
-    aside nav ul {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-    }
-
-    aside nav ul li {
-        margin-bottom: 0; 
-        margin-right: 10px; 
-    }
-
-    aside nav ul li a {
-        font-size: 14px; 
+    #section6 div {
+        flex-direction: column; /* Apilar los elementos en columnas en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos */
     }
 
     main section div {
-        flex-direction: column; 
-        text-align: center; 
+        flex-direction: column; /* Apilar los elementos verticalmente */
     }
 
+    /* Ajustar imágenes dentro de las secciones */
     main section img {
-        margin-left: 0; 
-        margin-bottom: 10px;
-        max-width: 80%; 
+        margin-left: 0; /* Eliminar margen izquierdo */
+        max-width: 100%; /* Asegurar que la imagen se ajuste al ancho del contenedor */
+    }
+    
+    /* Ajustar la visualización de los párrafos */
+    main section div p {
+        margin-left: 0; /* Eliminar margen izquierdo */
+        margin-right: 0; /* Eliminar margen derecho */
+    }
+
+    #section6 div img {
+        margin-left: 0; /* Eliminar margen izquierdo */
+        max-width: 100%; /* Asegurar que la imagen se ajuste al ancho del contenedor */
     }
 }
-
-
-
 
