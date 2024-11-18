@@ -864,13 +864,13 @@ form button:hover {
 .download-link {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: ##234d2e;
     color: white;
     text-decoration: none;
 }
 
 .download-link:hover {
-    background-color: #0056b3;
+    background-color: #183620;
 }
 
 
@@ -991,7 +991,7 @@ aside nav ul li a {
 }
 
 aside nav ul li a:hover {
-    color: #4CAF50;
+    color: #183620;
     text-decoration: underline;
 }
 
@@ -1000,14 +1000,14 @@ aside nav ul li a:hover {
     display: inline-block;
     padding: 10px 15px;
     margin-top: 10px;
-    background-color: #4CAF50;
+    background-color: ##234d2e;
     color: white;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .download6-link:hover {
-    background-color: #45a049;
+    background-color: #183620;
 }
 
 
