@@ -1054,24 +1054,3 @@ aside nav ul li a:hover {
 }
 
 
-@media screen and (max-width: 480px) {
-    main {
-        padding-left: 0;
-    }
-
-    aside {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-    }
-
-    main section h2 {
-        font-size: 1.5rem;
-    }
-
-    .download6-link {
-        width: 100%;
-        text-align: center;
-    }
-}
