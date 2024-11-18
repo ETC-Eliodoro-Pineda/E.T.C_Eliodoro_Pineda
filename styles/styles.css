@@ -544,7 +544,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px; /* Para dar espacio entre los elementos */
+    gap: 20px; 
 }
 
 .mencion {
@@ -582,31 +582,31 @@ h2 {
     margin-top: 10px;
 }
 
-/* Media Queries para Responsividad */
+
 @media (max-width: 1200px) {
     .mencion {
-        width: 45%; /* En pantallas más pequeñas, las menciones ocupan el 45% del ancho */
+        width: 45%; 
     }
 }
 
 @media (max-width: 768px) {
     .mencion {
-        width: 100%; /* En pantallas más pequeñas, las menciones ocupan el 100% del ancho */
-        margin: 10px 0; /* Menos margen entre las menciones */
+        width: 100%; 
+        margin: 10px 0; 
     }
 }
 
 @media (max-width: 480px) {
     .mencion h3 {
-        font-size: 1.5em; /* Ajustar el tamaño de la fuente */
+        font-size: 1.5em; 
     }
 
     .mencion p, .mencion ul li {
-        font-size: 0.9em; /* Ajustar el tamaño del texto */
+        font-size: 0.9em; 
     }
 
     .mencion-image {
-        max-width: 80%; /* La imagen se ajusta un poco más en pantallas muy pequeñas */
+        max-width: 80%;
     }
 }
 
@@ -674,7 +674,7 @@ h2 {
 }
 
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .galeria-item {
         flex: 1 1 calc(100% - 20px);
@@ -873,34 +873,34 @@ form button:hover {
     background-color: #0056b3;
 }
 
-/* Responsividad para pantallas pequeñas */
+
 @media (max-width: 768px) {
-    /* Cambiar la disposición de la información a columna */
+    
     .info-container {
         flex-direction: column;
-        align-items: center;  /* Centrar el contenido */
+        align-items: center;  
     }
 
     .info-description, .user-manual {
         flex: none;
         margin: 10px 0;
-        width: 100%;  /* Asegurarse de que los elementos no se desborden */
-        text-align: center;  /* Centrar el texto */
+        width: 100%;  
+        text-align: center;  
     }
 
     .info-image {
-        max-width: 80%;  /* Reducir el tamaño de la imagen */
-        margin: 20px auto;  /* Centrar la imagen */
+        max-width: 80%; 
+        margin: 20px auto;  
     }
 
     .download-link {
-        width: 100%;  /* Hacer el enlace de descarga ocupar todo el ancho */
-        text-align: center;  /* Centrar el texto dentro del enlace */
-        padding: 15px;  /* Aumentar el tamaño del botón */
+        width: 100%;  
+        text-align: center;  
+        padding: 15px;  
     }
 }
 
-/* Estilos generales */
+
 main {
     position: relative;
     padding-left: 250px;
@@ -915,7 +915,7 @@ main section div {
     align-items: center;
     padding: 20px;
     flex-direction: column;
-    background-color: #f0f0f0; /* Fondo para el contenedor de las etiquetas */
+    background-color: #f0f0f0; 
     border-radius: 8px;
 }
 
@@ -927,10 +927,10 @@ main section div p {
 
 main section img {
     margin: 10px 0;
-    max-width: 200px; /* Tamaño máximo del ancho */
-    max-height: 200px; /* Tamaño máximo del alto */
-    object-fit: contain; /* Ajustar sin deformar */
-    border-radius: 8px; /* Opcional: bordes redondeados para las imágenes */
+    max-width: 200px; 
+    max-height: 200px;
+    object-fit: contain; 
+    border-radius: 8px; 
 }
 
 main section h2 {
@@ -958,13 +958,13 @@ main section h2 {
 
 #section6 div img {
     margin: 10px;
-    max-width: 200px; /* Tamaño máximo del ancho */
-    max-height: 200px; /* Tamaño máximo del alto */
-    object-fit: contain; /* Ajustar sin deformar */
-    border-radius: 8px; /* Opcional */
+    max-width: 200px; 
+    max-height: 200px; 
+    object-fit: contain; 
+    border-radius: 8px; 
 }
 
-/* Estilos para el aside (barra lateral) */
+
 aside {
     position: absolute;
     top: 0;
@@ -995,7 +995,7 @@ aside nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para el enlace de descarga */
+
 .download6-link {
     display: inline-block;
     padding: 10px 15px;
@@ -1010,9 +1010,9 @@ aside nav ul li a:hover {
     background-color: #45a049;
 }
 
-/* Media Queries para hacerlo responsivo */
 
-/* Dispositivos pequeños (pantallas < 768px) */
+
+
 @media screen and (max-width: 768px) {
     main {
         padding-left: 0;
@@ -1043,7 +1043,7 @@ aside nav ul li a:hover {
     main section div {
         flex-direction: column;
         text-align: center;
-        background-color: #f7f7f7; /* Fondo también para pantallas pequeñas */
+        background-color: #f7f7f7; 
     }
 
     main section img {
@@ -1053,7 +1053,7 @@ aside nav ul li a:hover {
     }
 }
 
-/* Dispositivos muy pequeños (pantallas < 480px) */
+
 @media screen and (max-width: 480px) {
     main {
         padding-left: 0;
