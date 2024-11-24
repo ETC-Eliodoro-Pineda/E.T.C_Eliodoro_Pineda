@@ -23,7 +23,7 @@ body {
     
     background-image: 
     linear-gradient(to bottom, #234d2e ,#4caf4f3f), 
-    url(/Recursos/IMG/imagen-banner.jpg); 
+    url(/Recursos/IMG/imagen-banner .jpg); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;   
