@@ -73,8 +73,7 @@ body {
 }
 
 .nav-links {
-    display: flex;
-    border-radius: 9px;
+    display: flex;    
     gap: 1rem;
     position: relative; 
 }
@@ -342,7 +341,7 @@ body {
         width: 100%;
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+        z-index: 10;
     }
     .menu-toggle:checked+.hamburger {
         background-color: transparent;
@@ -583,32 +582,61 @@ h2 {
 }
 
 
-@media (max-width: 1200px) {
-    .mencion {
-        width: 45%; 
+.plan-container {
+    max-width: 90%; /* Reduce el ancho máximo a un 80% del contenedor principal */
+    margin: 40px auto; /* Centra el contenedor horizontalmente y da más espacio superior/inferior */
+    padding: 20px; /* Incrementa el espacio interno */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto
+  }
+  .plan-container h3 {
+   color: #234d2e;
+   font-size: 30px;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+  }
+  
+  table.plan {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1em; /* Escala del texto para adaptarse */
+  }
+  
+  table.plan thead {
+    background-color: #234d2e;
+    color: white;
+  }
+  
+  table.plan th, table.plan td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+ 
+ 
+  table.plan th {
+    padding: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    table.plan {
+      font-size: 0.8em; /* Reduce el tamaño del texto */
     }
-}
-
-@media (max-width: 768px) {
+  
+    .plan-container {
+      padding: 5px; /* Reduce el espacio alrededor de la tabla */
+    }
     .mencion {
         width: 100%; 
         margin: 10px 0; 
     }
-}
-
-@media (max-width: 480px) {
-    .mencion h3 {
-        font-size: 1.5em; 
-    }
-
-    .mencion p, .mencion ul li {
-        font-size: 0.9em; 
-    }
-
-    .mencion-image {
-        max-width: 80%;
-    }
-}
+  }
+  
+   
 
 /* ---- Sección Fotos Y Galeria ---- */
 
