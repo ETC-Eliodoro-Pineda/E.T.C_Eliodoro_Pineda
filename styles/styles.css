@@ -645,11 +645,11 @@ h2 {
   
   @media (max-width: 768px) {
     table.plan {
-      font-size: 0.8em; /* Reduce el tamaño del texto */
+      font-size: 0.8em; 
     }
   
     .plan-container {
-      padding: 5px; /* Reduce el espacio alrededor de la tabla */
+      padding: 5px; 
     }
     .mencion {
         width: 100%; 
@@ -990,18 +990,6 @@ main section h2 {
     border-radius: 8px; 
 }
 
-#section7 div {
-    display: flex;
-    justify-content: center; /* Centra el contenido */
-    align-items: center; 
-}
-
-#section7 img {
-    width: 100%; /* Hace que la imagen abarque todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 10px; /* Añade bordes redondeados opcionalmente */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional para dar profundidad */
-}
 
 
 aside {
