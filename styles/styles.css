@@ -108,7 +108,7 @@ body {
     transform: scaleX(1);
 }
 
-/* ---- Hamburger Menu Icon ---- */
+/* ---- Hamburger Menu Icono ---- */
 
 .menu-toggle {
     display: none; 
@@ -161,7 +161,7 @@ body {
 .notification {
     position: relative;
     display: inline-block;
-    padding-left: 200px; 
+    padding-left: 200px;
 }
 
 .notification-toggle {
@@ -177,7 +177,6 @@ body {
     position: relative;
 }
 
-/* Punto rojo de notificación */
 .notification-label::after {
     content: '';
     position: absolute;
@@ -188,7 +187,6 @@ body {
     background-color: red;
     border-radius: 50%;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-    
 }
 
 /* Estilo del cuadro de notificación */
@@ -201,14 +199,13 @@ body {
     background-color: #234d2e;
     color: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     width: 300px;
     max-width: 90%; 
     z-index: 10;
     text-align: center;
 }
-
 
 .notification-toggle:checked + .notification-label + .notification-content {
     display: block;
@@ -218,7 +215,7 @@ body {
     display: none; 
 }
 
-
+/* Estilo para cerrar la notificación */
 .notification-close-area {
     display: block;
     cursor: pointer;
@@ -230,13 +227,27 @@ body {
     font-size: 20px;
 }
 
+/* Estilo del texto */
 .notification-content p {
-    margin: 0;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.notification-label:hover {
-    color: #ffffff; 
+/* Título dentro de la notificación */
+.notification-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #f5f5f5;
 }
+
+
+
+.notification-label:hover {
+    color: #b4b4b4; 
+}
+
 
 
 .footer {
@@ -331,6 +342,25 @@ body {
 
 /* Responsividad */
 @media (max-width: 768px) {
+
+    .notification {
+        padding-left: 20px;
+    }
+    .notification-content {
+        width: 90%; 
+        padding: 15px; 
+    }
+    .notification-title {
+        font-size: 16px;
+    }
+    .notification-content p {
+        font-size: 14px;
+    }
+    .notification-button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -360,6 +390,9 @@ body {
     .hamburger {
         display: block;
     }
+    .menu-logo h1 {
+        font-size: 0.9em; 
+    }
     .services-container,
     .team-container,
     .portfolio-container {
@@ -381,18 +414,6 @@ body {
         
     }
 }
-
-@media (max-width: 768px) {
-    .notification {
-        padding-left: 20px;
-    }
-    .notification-content {
-        width: 80%; 
-        padding: 15px; 
-    }
-}
-
-
 
 /* ---- CSS INDEX y Galleria ---- */
 
@@ -583,9 +604,9 @@ h2 {
 
 
 .plan-container {
-    max-width: 90%; /* Reduce el ancho máximo a un 80% del contenedor principal */
-    margin: 40px auto; /* Centra el contenedor horizontalmente y da más espacio superior/inferior */
-    padding: 20px; /* Incrementa el espacio interno */
+    max-width: 90%; 
+    margin: 40px auto; 
+    padding: 20px; 
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -603,7 +624,7 @@ h2 {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
-    font-size: 1em; /* Escala del texto para adaptarse */
+    font-size: 1em; 
   }
   
   table.plan thead {
@@ -967,6 +988,19 @@ main section h2 {
     max-height: 200px; 
     object-fit: contain; 
     border-radius: 8px; 
+}
+
+#section7 div {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    align-items: center; 
+}
+
+#section7 img {
+    width: 100%; /* Hace que la imagen abarque todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Añade bordes redondeados opcionalmente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional para dar profundidad */
 }
 
 
